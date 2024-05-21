@@ -1,0 +1,12 @@
+{
+  "name": "node_training_hw9",
+  "version": "1.0.0",
+  "description": "Repository focusing on Studying node with the focus on javascript data structures (stack, queue, tree, graph, linked list)",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
