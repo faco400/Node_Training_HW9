@@ -17,8 +17,8 @@ Demonstrate your knowledge of data structures (stack, queue, tree, graph, linked
 1. **Stack**: Implement a class for a stack data structure. Include methods for push, pop, and peek.
 2. **Queue**: Implement a class for a queue data structure. Include methods for enqueue, dequeue, and peek.
 3. **Binary Tree**: Implement a class for a binary tree data structure. Include methods for inserting nodes, searching for a node, and traversing the tree (e.g., in-order, pre-order, post-order).
-<!-- 4. **Graph**: Implement a class for a graph data structure. Include methods for adding vertices and edges, performing depth-first search (DFS), and breadth-first search (BFS).
-5. **Linked List**: Implement a class for a singly linked list data structure. Include methods for inserting nodes, deleting nodes, and searching for a node. -->
+4. **Graph**: Implement a class for a graph data structure. Include methods for adding vertices and edges, performing depth-first search (DFS), and breadth-first search (BFS).
+<!-- 5. **Linked List**: Implement a class for a singly linked list data structure. Include methods for inserting nodes, deleting nodes, and searching for a node. -->
 
 # Documentation
 
@@ -48,6 +48,8 @@ Demonstrate your knowledge of data structures (stack, queue, tree, graph, linked
   - **dequeue():** Removes and returns the element at the front of the queue. Returns 'the queue is empty' if the queue is empty.
 
   - **peek():** Returns the element at the front of the queue without removing it. Returns 'the queue is empty' if the queue is empty.
+
+  - **getLength:** Returns value of queue length.
 
 ## [BinaryTree](./data_structures/BTree.js): Class to represent a binary tree data structure
 - **Properties:**
