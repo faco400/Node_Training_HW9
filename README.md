@@ -6,6 +6,8 @@ Repository focusing on Studying node with the focus on javascript data structure
   - [Stack](#stack-class-to-represent-a-stack-data-structure)
   - [Queue](#queue-class-to-represent-a-queue-data-structure)
   - [Binary Tree](#binarytree-class-to-represent-a-binary-tree-data-structure)
+  - [Graph](#graph-class-to-represent-a-graph-data-structure)
+  - [Linked List](#linked-list-class-to-represent-singly-linked-list-data-structure)
 
 
 ### Task
@@ -18,7 +20,7 @@ Demonstrate your knowledge of data structures (stack, queue, tree, graph, linked
 2. **Queue**: Implement a class for a queue data structure. Include methods for enqueue, dequeue, and peek.
 3. **Binary Tree**: Implement a class for a binary tree data structure. Include methods for inserting nodes, searching for a node, and traversing the tree (e.g., in-order, pre-order, post-order).
 4. **Graph**: Implement a class for a graph data structure. Include methods for adding vertices and edges, performing depth-first search (DFS), and breadth-first search (BFS).
-<!-- 5. **Linked List**: Implement a class for a singly linked list data structure. Include methods for inserting nodes, deleting nodes, and searching for a node. -->
+5. **Linked List**: Implement a class for a singly linked list data structure. Include methods for inserting nodes, deleting nodes, and searching for a node.
 
 # Documentation
 
@@ -35,6 +37,8 @@ Demonstrate your knowledge of data structures (stack, queue, tree, graph, linked
   - **pop():** Removes and returns the top element from the stack. Returns 'Stack is empty' if the stack is empty.
 
   - **peek():** Returns the top element from the stack without removing it. Returns 'Stack is empty' if the stack is empty.
+
+  - **getLength:** Returns value of stack length.
 
 
 ## [Queue](./data_structures/Queue.js): Class to represent a queue data structure
@@ -74,3 +78,34 @@ Demonstrate your knowledge of data structures (stack, queue, tree, graph, linked
   - **postOrder(node)**: Performs a post-order traversal of the binary tree starting from the given node, printing the values of the nodes.
 
   - **search(node, value)**: Searches for a node with the specified value starting from the given node.
+
+## [Graph](./data_structures/Graph.js): Class to represent a graph data structure
+
+- **Properties:**
+  - **adjacencyList:** list of adjacency elements on graph
+    - **type:** Object.
+
+- **Methods:**
+  - **addVertex(vertex)**: Performs the addition of vertex in list of adjacency.
+
+  - **addEdge(v1,v2)**: Performs the addition of edges in list of adjacency.
+
+  - **BFS(start)**: Performs the Breadth-First Search traversal in the graph using a start vertex.
+
+  - **DFS(start)**: Performs the Depth-First Search traversal in the graph using a start vertex.
+
+## [Linked List](./data_structures/linkedList.js): Class to represent singly Linked list data structure
+
+- **Properties:**
+  - **head:** head of linked list, points to first element of list
+    - **type:** Node or null.
+
+- **Methods:**
+  - **insert(value)**: receives a value, creates a node with that value and insert it into the linked list. Returns true if 
+
+  - **delete(value)**: Deletes a node with specified value from linked list
+
+  - **search(value)**: search for a node with specified value in linked list. If it finds then returns node, otherwise return false. It also returns false if empty list
+
+  - **printList()**: Prints in console the order of linked list
+  

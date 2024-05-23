@@ -3,6 +3,7 @@ const Stack = require('./data_structures/Stack.js');
 const Queue = require('./data_structures/Queue.js');
 const BinaryTree = require('./data_structures/BTree.js');
 const Graph = require('./data_structures/Graph.js');
+const LinkedList = require('./data_structures/linkedList.js')
 
 //-----------------Testing stack ------------------
 // const stackTest = new Stack();
@@ -37,7 +38,7 @@ const Graph = require('./data_structures/Graph.js');
 
 
 // create an object for the BinaryTree
-var BST = new BinaryTree();
+// var BST = new BinaryTree();
  
 // Inserting nodes to the BinaryTree
 // BST.insert(15);
@@ -66,45 +67,66 @@ var BST = new BinaryTree();
 //-------------------------------------------------
 //-----------------Testing Graph ------------------
 
-const graph = new Graph();
+// const graph = new Graph();
 
-//initialize adjacency list with vertices
-graph.addVertex(15);
-graph.addVertex(25);
-graph.addVertex(10);
-graph.addVertex(7);
-graph.addVertex(22);
-graph.addVertex(17);
-graph.addVertex(13);
-graph.addVertex(5);
-graph.addVertex(9);
-graph.addVertex(27);
+// //initialize adjacency list with vertices
+// graph.addVertex(15);
+// graph.addVertex(25);
+// graph.addVertex(10);
+// graph.addVertex(7);
+// graph.addVertex(22);
+// graph.addVertex(17);
+// graph.addVertex(13);
+// graph.addVertex(5);
+// graph.addVertex(9);
+// graph.addVertex(27);
 
-//creating edges
-//          15
-//         /  \
-//        10   25
-//       / \   / \
-//      7  13 22  27
-//     / \    /
-//    5   9  17
+// //creating edges
+// //          15
+// //         /  \
+// //        10   25
+// //       / \   / \
+// //      7  13 22  27
+// //     / \    /
+// //    5   9  17
 
-graph.addEdge(15,25);
-graph.addEdge(15,10);
-graph.addEdge(10,7);
-graph.addEdge(10,13);
-graph.addEdge(7,5);
-graph.addEdge(7,9);
-graph.addEdge(25,22);
-graph.addEdge(25,27);
-graph.addEdge(22,17);
+// graph.addEdge(15,25);
+// graph.addEdge(15,10);
+// graph.addEdge(10,7);
+// graph.addEdge(10,13);
+// graph.addEdge(7,5);
+// graph.addEdge(7,9);
+// graph.addEdge(25,22);
+// graph.addEdge(25,27);
+// graph.addEdge(22,17);
 
-console.log('BFS RESULT:');
-console.log(graph.BFS(15));
+// console.log('BFS RESULT:');
+// console.log(graph.BFS(15));
 
-console.log('DFS RESULT:');
-console.log(graph.DFS(15));
+// console.log('DFS RESULT:');
+// console.log(graph.DFS(15));
 
+//-------------------------------------------------------
+//-----------------Testing linked List ------------------
+
+// const list = new LinkedList();
+// list.insert(1);
+// list.insert(2);
+// list.insert(3);
+// list.insert(4);
+// list.insert(5);
+
+// list.printList();
+// list.delete(4);
+// list.printList();
+// list.delete(1);
+// list.printList();
+// list.delete(5);
+// list.printList();
+
+// console.log(list.search(3));
+
+//-------------------------------------------------
 
 
 
