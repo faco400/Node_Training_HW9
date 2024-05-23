@@ -4,6 +4,7 @@ Repository focusing on Studying node with the focus on javascript data structure
 1. [Task](#task)
 2. [Documentation](#documentation)
   - [Stack](#stack-class-to-represent-a-stack-data-structure)
+    - [Min/Max Stack](#minmax-stack-class-extended-from-stack-to-support-getting-minimum-and-maximum-elements-in-constant-time-o1)
   - [Queue](#queue-class-to-represent-a-queue-data-structure)
   - [Binary Tree](#binarytree-class-to-represent-a-binary-tree-data-structure)
   - [Graph](#graph-class-to-represent-a-graph-data-structure)
@@ -28,8 +29,6 @@ Demonstrate your knowledge of data structures (stack, queue, tree, graph, linked
 - **Properties:**
   - **stack:** an array to hold the elements of the stack.
     - **type:** array.
-  - **top:** Top element of stack
-    - **type:** number.
 
 - **Methods:**
   - **push(element):** Adds an element to the top of the stack.
@@ -39,6 +38,20 @@ Demonstrate your knowledge of data structures (stack, queue, tree, graph, linked
   - **peek():** Returns the top element from the stack without removing it. Returns 'Stack is empty' if the stack is empty.
 
   - **getLength:** Returns value of stack length.
+
+## [Min/Max Stack](./data_structures/Stack.js): Class extended from Stack to support getting minimum and maximum elements in constant time (O(1)).
+
+- **Observations:**
+This class has two extra properties that are now being considering when performing the push and pop operations:
+  - **minStack**: array that stores min value of stack for each iteration
+    - **type:** array.
+  - **maxStack**: array that stores max value of stack for each iteration
+    - **type:** array.
+And two more methods: 
+  - **getMin()**: returns the min value of stack by getting the top element of minStack.
+  - **getMax()**: returns the max value of satack by getting the top element of maxStack.
+
+**It guarantees constant time (O(1)) of getting min and max by implementing two more additional stacks: maxStack and minStack, each is responsible to stack the max and min values every push operation. This way, every time we pop a element out of the stack, we make sure the max and min values change accordingly. And every time we need to get either value we just need to extract the top element of each of these stacks.** 
 
 
 ## [Queue](./data_structures/Queue.js): Class to represent a queue data structure
@@ -78,6 +91,9 @@ Demonstrate your knowledge of data structures (stack, queue, tree, graph, linked
   - **postOrder(node)**: Performs a post-order traversal of the binary tree starting from the given node, printing the values of the nodes.
 
   - **search(node, value)**: Searches for a node with the specified value starting from the given node.
+
+**Observations**:
+  - **isBinarySearchTree(node, min = null, max = null)**: Verifies if tree is a BST tree recursively searching subtrees to the left and right of root. If node values are less to than each other as it traverses more to the left, and greater the more it goes to the right then it respects the BST property, thus being a BST.
 
 ## [Graph](./data_structures/Graph.js): Class to represent a graph data structure
 

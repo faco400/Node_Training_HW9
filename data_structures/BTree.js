@@ -1,13 +1,5 @@
 const Node = require('./aux-classes/Node.js')
 
-// class Node {
-//   constructor (value) {
-//     this.value = value;
-//     this.right = null;
-//     this.left = null;
-//   }
-// }
-
 class BinaryTree {
   constructor () {
     this.root = null;
@@ -172,6 +164,17 @@ class BinaryTree {
     } else if (node.value < value) {
       this.search(node.right, value);
     }
+  }
+
+  isBinarySearchTree(node, min = null, max = null) {
+    if(node === null) {
+      return true;
+    }
+
+    if((min !== null && node.value <= min) || (max !== null && node.value >= max))
+      return false;
+    
+    return this.isBinarySearchTree(node.left, min, node.value) && this.isBinarySearchTree(node.right, node.value, max);
   }
 
 }

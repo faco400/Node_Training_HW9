@@ -1,5 +1,5 @@
 //importing classes
-const Stack = require('./data_structures/Stack.js');
+const {Stack, MinMaxStack} = require('./data_structures/Stack.js');
 const Queue = require('./data_structures/Queue.js');
 const BinaryTree = require('./data_structures/BTree.js');
 const Graph = require('./data_structures/Graph.js');
@@ -17,6 +17,17 @@ const LinkedList = require('./data_structures/linkedList.js')
 // console.log(stackTest.peek()); // returns 5
 // console.log(stackTest.pop()); // returns 5
 // console.log(stackTest.peek()); //returns 234 
+
+//-----------------MinMax stack test ------------------
+
+// const stackTest = new MinMaxStack();
+
+// console.log(stackTest.peek()); // return its empty
+// stackTest.push(1); 
+// stackTest.push(234);
+// stackTest.push(5); 
+// console.log(stackTest.getMin()); //return 1
+// console.log(stackTest.getMax()); // returns 234
 
 //-------------------------------------------------
 //-----------------Testing queue ------------------
@@ -37,32 +48,36 @@ const LinkedList = require('./data_structures/linkedList.js')
 //-----------------Testing Btree ------------------
 
 
-// create an object for the BinaryTree
-// var BST = new BinaryTree();
+// // create an object for the BinaryTree
+// var Btree = new BinaryTree();
  
-// Inserting nodes to the BinaryTree
-// BST.insert(15);
-// BST.insert(25);
-// BST.insert(10);
-// BST.insert(7);
-// BST.insert(22);
-// BST.insert(17);
-// BST.insert(13);
-// BST.insert(5);
-// BST.insert(9);
-// BST.insert(27);
+// // Inserting nodes to the BinaryTree
+// Btree.insert(15);
+// Btree.insert(25);
+// Btree.insert(10);
+// Btree.insert(7);
+// Btree.insert(22);
+// Btree.insert(17);
+// Btree.insert(13);
+// Btree.insert(5);
+// Btree.insert(9);
+// Btree.insert(27);
 
-//          15
-//         /  \
-//        10   25
-//       / \   / \
-//      7  13 22  27
-//     / \    /
-//    5   9  17 
+//   //        15
+//   //       /  \
+//   //      10   25
+//   //     / \   / \
+//   //    7  13 22  27
+//   //   / \    /
+//   //  5   9  17 
 
-// BST.inOrder(BST.getRoot());
-// BST.preOrder(BST.getRoot());
-// BST.postOrder(BST.getRoot());
+// //verifies orders
+// Btree.inOrder(Btree.getRoot());
+// // Btree.preOrder(Btree.getRoot());
+// // Btree.postOrder(Btree.getRoot());
+
+// // verifies if binary search tree
+// console.log(Btree.isBinarySearchTree(Btree.getRoot())); 
 
 //-------------------------------------------------
 //-----------------Testing Graph ------------------
