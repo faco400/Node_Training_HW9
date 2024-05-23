@@ -30,4 +30,19 @@ class Queue {
   }
 }
 
-module.exports = Queue;
+class PriorityQueue extends Queue {
+
+  //insert a object with value and priority a the end of queue
+  enqueue(value, priority) {
+    this.queue.push({value, priority});
+    this.sort();
+  }
+
+  //sorts queue based on lower priority to greater priority
+  sort() {
+    this.queue.sort((a,b) => a.priority - b.priority);
+  }
+
+}
+
+module.exports = {Queue, PriorityQueue};

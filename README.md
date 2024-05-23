@@ -6,8 +6,10 @@ Repository focusing on Studying node with the focus on javascript data structure
   - [Stack](#stack-class-to-represent-a-stack-data-structure)
     - [Min/Max Stack](#minmax-stack-class-extended-from-stack-to-support-getting-minimum-and-maximum-elements-in-constant-time-o1)
   - [Queue](#queue-class-to-represent-a-queue-data-structure)
+   - [Priority Queue](#priority-queue-class-extended-from-queue-data-structure)
   - [Binary Tree](#binarytree-class-to-represent-a-binary-tree-data-structure)
   - [Graph](#graph-class-to-represent-a-graph-data-structure)
+    - [Weighted Graph](#weighted-graph-class-that-extends-from-graph)
   - [Linked List](#linked-list-class-to-represent-singly-linked-list-data-structure)
 
 
@@ -22,6 +24,16 @@ Demonstrate your knowledge of data structures (stack, queue, tree, graph, linked
 3. **Binary Tree**: Implement a class for a binary tree data structure. Include methods for inserting nodes, searching for a node, and traversing the tree (e.g., in-order, pre-order, post-order).
 4. **Graph**: Implement a class for a graph data structure. Include methods for adding vertices and edges, performing depth-first search (DFS), and breadth-first search (BFS).
 5. **Linked List**: Implement a class for a singly linked list data structure. Include methods for inserting nodes, deleting nodes, and searching for a node.
+
+### **Part 2: Algorithmic Problems**
+
+1. **Min/Max Stack**: Implement a class for a stack that supports finding the minimum and maximum elements in constant time (O(1)). Include methods for push, pop, getMin, and getMax.
+
+2. **Binary Search Tree**: Implement a function to determine if a binary tree is a binary search tree (BST). Provide an efficient algorithm that checks whether the tree satisfies the BST property.
+
+3. **Graph Algorithms**: Implement algorithms to find the shortest path between two vertices in a graph using both Dijkstra's algorithm and Breadth-First Search (BFS).
+
+4. **Linked List Cycle**: Implement a function to detect if a linked list has a cycle. Use Floyd's Cycle Detection Algorithm (Tortoise and Hare algorithm) to solve this problem efficiently.
 
 # Documentation
 
@@ -68,6 +80,11 @@ And two more methods:
 
   - **getLength:** Returns value of queue length.
 
+## [Priority Queue](./data_structures/Queue.js): Class extended from queue data structure
+- **Observations:**
+This class was made to facilitate the implementation of a weighted graph. A priority queue considers not only the value of each element but its corresponding priority. With that, the enqueue operation now has two parameters (value and priority). And it now has one more method:
+- **sort()**: used to sort priorities of queue, the first position should have the lower priority, and the last position, the highest.
+
 ## [BinaryTree](./data_structures/BTree.js): Class to represent a binary tree data structure
 - **Properties:**
   - **root:** The root node of the binary tree.
@@ -109,6 +126,15 @@ And two more methods:
   - **BFS(start)**: Performs the Breadth-First Search traversal in the graph using a start vertex.
 
   - **DFS(start)**: Performs the Depth-First Search traversal in the graph using a start vertex.
+
+## [Weighted Graph](./data_structures/Graph.js): Class that extends from Graph
+**Observations**:
+Since now this type of graph takes into consideration the weight of edges, we now have weight parameter when adding edges. And now its possible to find shortest path between nodes and implement Dijkstra algorith:
+
+- **Dikstra(start, end)**: Named after its creator, Edsger W. Dijkstra, this algorithm operates on a weighted graph (a network of nodes connected by edges with weights, where weights typically represent distances, costs, etc.). It determines the shortest path from a starting node to all other nodes in the graph.
+
+- **ShortestPathBFS(start, end)**: Modified version of BFS that searches shortest path between two nodes using the BFS search to traverse the graph. It now has not only the start node but the end node representing the final destination.
+
 
 ## [Linked List](./data_structures/linkedList.js): Class to represent singly Linked list data structure
 

@@ -2,7 +2,7 @@
 const {Stack, MinMaxStack} = require('./data_structures/Stack.js');
 const Queue = require('./data_structures/Queue.js');
 const BinaryTree = require('./data_structures/BTree.js');
-const Graph = require('./data_structures/Graph.js');
+const {Graph, WeightedGraph} = require('./data_structures/Graph.js');
 const LinkedList = require('./data_structures/linkedList.js')
 
 //-----------------Testing stack ------------------
@@ -122,6 +122,46 @@ const LinkedList = require('./data_structures/linkedList.js')
 // console.log(graph.DFS(15));
 
 //-------------------------------------------------------
+//-----------------Testing BFS shortest Path ------------------
+
+const graph = new WeightedGraph();
+
+// graph
+// A
+// | \
+// 4   2
+// |     \
+// B      C
+// |     2 \
+// 3    /   4
+// |   D--1---F
+// |  /     / 
+// | 3     /   
+// |/     /     
+// E-----1       
+
+// adding vertices
+graph.addVertex('A');
+graph.addVertex('B');
+graph.addVertex('C');
+graph.addVertex('D');
+graph.addVertex('E');
+graph.addVertex('F');
+
+// adding edges
+graph.addEdge('A', 'B', 4);
+graph.addEdge('A', 'C', 2);
+graph.addEdge('B', 'E', 3);
+graph.addEdge('C', 'D', 2);
+graph.addEdge('C', 'F', 4);
+graph.addEdge('D', 'E', 3);
+graph.addEdge('D', 'F', 1);
+graph.addEdge('E', 'F', 1);
+
+console.log('Shortest Path with BFS: ' + graph.ShortestPathBFS('A','F'));
+console.log('Shortest Path with dijkstra: ' + graph.Dijkstra('A', 'F'));
+
+// -------------------------------------------------------
 //-----------------Testing linked List ------------------
 
 // const list = new LinkedList();
