@@ -28,6 +28,7 @@ class Queue {
   getLength() {
     return this.queue.length;
   }
+
 }
 
 class PriorityQueue extends Queue {

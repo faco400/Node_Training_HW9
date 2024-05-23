@@ -12,6 +12,8 @@ Repository focusing on Studying node with the focus on javascript data structure
     - [Weighted Graph](#weighted-graph-class-that-extends-from-graph)
   - [Linked List](#linked-list-class-to-represent-singly-linked-list-data-structure)
 
+3. [How to run](#how-to-run)
+
 
 ### Task
 
@@ -34,6 +36,14 @@ Demonstrate your knowledge of data structures (stack, queue, tree, graph, linked
 3. **Graph Algorithms**: Implement algorithms to find the shortest path between two vertices in a graph using both Dijkstra's algorithm and Breadth-First Search (BFS).
 
 4. **Linked List Cycle**: Implement a function to detect if a linked list has a cycle. Use Floyd's Cycle Detection Algorithm (Tortoise and Hare algorithm) to solve this problem efficiently.
+
+### **Part 3: Demonstration**
+
+1. **Usage Demonstration**: Create instances of your data structures and demonstrate their usage with sample data. Show how the algorithms you implemented can solve practical problems using these data structures.
+
+### **Part 4: Documentation**
+
+1. **Documentation**: Provide clear and concise comments and documentation for your code. Explain the purpose of each data structure, method, and algorithm. Describe how the algorithms work and their time complexity.
 
 # Documentation
 
@@ -150,4 +160,14 @@ Since now this type of graph takes into consideration the weight of edges, we no
   - **search(value)**: search for a node with specified value in linked list. If it finds then returns node, otherwise return false. It also returns false if empty list
 
   - **printList()**: Prints in console the order of linked list
-  
+
+  - **hasCycle**: This method detects if linked list has a cycle. It uses the Floyd's Cycle Detection Algorithm (Tortoise and Hare algorithm). The algorithm consists in using two pointers, one slow(Tortoise) and the other fast (Hare) and compares the two in order to detect cycle. It runs in a complexity of time of (O(n)) since in the worst case scenario it has to verify the length of the non-cyclcic part of list + the length of the cyclic part witch equal the total length of list.
+  **Observations**:
+  In order to facilate the demonstration in the *main.js* file, it was implemented a **createCycle()** method responsible to create a cycle in the linked list.
+
+# How to run:
+Feel free to test the demonstration cases implemented in the *main.js* file. To run it, simply execute the following command in the root directory of project:
+
+```console
+node main.js
+```

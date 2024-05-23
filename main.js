@@ -124,42 +124,42 @@ const LinkedList = require('./data_structures/linkedList.js')
 //-------------------------------------------------------
 //-----------------Testing BFS shortest Path ------------------
 
-const graph = new WeightedGraph();
+// const graph = new WeightedGraph();
 
-// graph
-// A
-// | \
-// 4   2
-// |     \
-// B      C
-// |     2 \
-// 3    /   4
-// |   D--1---F
-// |  /     / 
-// | 3     /   
-// |/     /     
-// E-----1       
+// // graph
+// // A
+// // | \
+// // 4   2
+// // |     \
+// // B      C
+// // |     2 \
+// // 3    /   4
+// // |   D--1---F
+// // |  /     / 
+// // | 3     /   
+// // |/     /     
+// // E-----1       
 
-// adding vertices
-graph.addVertex('A');
-graph.addVertex('B');
-graph.addVertex('C');
-graph.addVertex('D');
-graph.addVertex('E');
-graph.addVertex('F');
+// // adding vertices
+// graph.addVertex('A');
+// graph.addVertex('B');
+// graph.addVertex('C');
+// graph.addVertex('D');
+// graph.addVertex('E');
+// graph.addVertex('F');
 
-// adding edges
-graph.addEdge('A', 'B', 4);
-graph.addEdge('A', 'C', 2);
-graph.addEdge('B', 'E', 3);
-graph.addEdge('C', 'D', 2);
-graph.addEdge('C', 'F', 4);
-graph.addEdge('D', 'E', 3);
-graph.addEdge('D', 'F', 1);
-graph.addEdge('E', 'F', 1);
+// // adding edges
+// graph.addEdge('A', 'B', 4);
+// graph.addEdge('A', 'C', 2);
+// graph.addEdge('B', 'E', 3);
+// graph.addEdge('C', 'D', 2);
+// graph.addEdge('C', 'F', 4);
+// graph.addEdge('D', 'E', 3);
+// graph.addEdge('D', 'F', 1);
+// graph.addEdge('E', 'F', 1);
 
-console.log('Shortest Path with BFS: ' + graph.ShortestPathBFS('A','F'));
-console.log('Shortest Path with dijkstra: ' + graph.Dijkstra('A', 'F'));
+// console.log('Shortest Path with BFS: ' + graph.ShortestPathBFS('A','F'));
+// console.log('Shortest Path with dijkstra: ' + graph.Dijkstra('A', 'F'));
 
 // -------------------------------------------------------
 //-----------------Testing linked List ------------------
@@ -180,6 +180,23 @@ console.log('Shortest Path with dijkstra: ' + graph.Dijkstra('A', 'F'));
 // list.printList();
 
 // console.log(list.search(3));
+
+//-------------------------------------------------
+//-----------------Testing Cycle detection ------------------
+
+
+// const list = new LinkedList();
+// list.insert(1);
+// list.insert(2);
+// list.insert(3);
+// list.insert(4);
+// list.insert(5);
+
+// list.printList();
+// console.log('Does it have a cycle? '+ list.hasCycle());
+// list.createCycle();
+// console.log('Cycle created!');
+// console.log('Does it have a cycle? '+ list.hasCycle());
 
 //-------------------------------------------------
 

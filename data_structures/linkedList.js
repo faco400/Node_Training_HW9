@@ -98,6 +98,41 @@ class LinkedList {
     result += 'null'
     console.log(result);
   }
+
+  //Floyd's Cycle Detection Algorithm (Tortoise and Hare algorithm)
+  hasCycle() {
+    if(this.head === null)
+      return null;
+
+    let slow = this.head;// slow pointer (Tortoise) 
+    let fast = this.head;// fast pointer (Hare) 
+
+    while(fast !== null && fast.next !== null){
+      slow = slow.next; // -> move 1 position  
+      fast = fast.next.next;// -> Move 2 postions
+
+      //if slow and fast pointer are equal then we have a cycle
+      if(slow === fast) {
+        return true;
+      }
+    }
+
+    //if no cycle found return false
+    return false;
+  }
+
+  //helper method for testing purposes
+  // it creates a cycle makind the end node point to head node
+  createCycle(){
+    let current = this.head;
+
+    while(current.next){
+      current = current.next;
+    }
+
+    current.next = this.head;
+  }
+
 }
 
 module.exports = LinkedList;
